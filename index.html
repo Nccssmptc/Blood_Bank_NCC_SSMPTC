@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank NccSSMPTC</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!---Ajax Script Link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!---Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Blood Bank Form</h1>
+        <p>Ncc SSM Polytechnic College Tirur</p>
+        <form id="submit-form" action="">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name" placeholder="Your Name...">
+            </div>
+
+            <div class="form-group">
+                <label for="department">Department:</label>
+                <input type="text" name="department" placeholder="Your Department....">
+            </div>
+
+            <div class="form-group">
+                <label for="semester">Semester:</label>
+                <input type="text" name="semester" placeholder="Your Semester" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Weight">Weight:</label>
+                <input type="text" name="Weight" placeholder="Your Weight...." required>
+            </div>
+
+            <div class="form-group">
+                <label for="bloodGroup">Blood Group:</label>
+                <input type="text" name="bloodGroup" placeholder="Your Blood Group...." required>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        <p class="footer">Developed By <a href="https://web.anas17095.repl.co">Anasuddeen</a></p>
+    </div>
+
+    <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbwfuZJmsrCps5GMVMq6t8pwT__pc_hklE0pSZEiuaOBGFEO6ExLX3D7Z9RQjgJ5znXggg/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    //alert("Form submitted successfully")
+                    window.location.href="Success.html"
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    //alert("Something Error")
+                    window.location.href="Failed.html"
+                }
+            })
+        })
+    </script>
+</body>
+</html>
