@@ -73,3 +73,62 @@
             color: red;
             
         }
+
+        /*------Profile Card------*/
+        .members{
+            max-width:1500px ;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            border-radius: 15px;
+            margin-top: 70px;
+            margin-bottom: 400px;
+            gap: 50px;
+            text-align: center;
+            transition: .7s;
+        }
+/*
+        .members:hover{
+            box-shadow: 10px 10px 5px #aaaaaa;
+        }
+*/
+        .members .profile-card{
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            padding: 30px;
+            width: 600px;
+            height: 330px;
+            transition: .7s;
+        }
+
+        .members .profile-card:hover{
+            background-color: #558de6;
+            box-shadow: 10px 10px 5px #aaaaaa;
+            color: #fff;
+        }
+
+        .members img{
+            width: 150px;
+            height: 200px;
+            border-radius: 10px;
+        }
+        
+        h2{
+            text-align: center;
+            font-size: 50px;
+        }
+
+@media screen and (max-width: 840px){
+          .members{
+            display: inline;
+            padding: 10px;
+            gap: 50px;
+          }
+
+          .members .profile-card{
+            width: 350px;
+            height: 400px;
+          }
+
+        }
+        
